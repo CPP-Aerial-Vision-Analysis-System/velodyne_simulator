@@ -31,6 +31,9 @@
   <arg name="rviz" default="true"/>
   <node if="$(arg rviz)" pkg="rviz" type="rviz" name="$(anon rviz)" respawn="false" output="screen" args="-d $(find velodyne_description)/rviz/example.rviz" />
 
+  <!-- SITL -->
+  <node pkg="Scripts" type="runSitl.sh" name="runSitl" output="screen"/>
+
   <!-- vim: set ft=xml noet : -->
 	<!-- Experimental launch script for APM based Drone -->
 	<arg name="fcu_url" default="udp://127.0.0.1:14551@14555" />
@@ -53,5 +56,7 @@
 		<arg name="tgt_component" value="$(arg tgt_component)" />
 		<arg name="log_output" value="$(arg log_output)" />
 	</include>
+
+  
 
 </launch>
