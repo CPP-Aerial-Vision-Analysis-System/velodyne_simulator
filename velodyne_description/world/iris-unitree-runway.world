@@ -153,7 +153,7 @@
       </joint>
 
       <!--add lidar-->
-      <link name="hokuyo_link">
+      <link name="unitree_link">
         <pose>0 0 0 0 0 0</pose>
         <collision name="collision">
           <pose>0 0 0.3 0 0 0</pose>
@@ -224,10 +224,10 @@
         </sensor>
       </link>
 
-      <joint name="hokuyo_joint" type="fixed">
+      <joint name="unitree_joint" type="fixed">
         <pose>0 0 0 0 0 0</pose>
         <parent>iris::iris_demo::iris::base_link</parent>
-        <child>hokuyo_link</child>
+        <child>unitree_link</child>
       </joint>
       
     </model>
